@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>你猜是谁</button>
+	<script>
+
+	var studentArr=["小明","小红","小橙","小黄","小绿","小青","小蓝","小紫"]
+	var newArr=[];
+	
+	function  getStudent(){
+		var ind = Math.floor(Math.random() * studentArr.length);
+		if (newArr.length===studentArr.length) {
+			alert("点名结束");
+			return;
+		}
+		if (newArr.indexOf(studentArr[ind]) === -1) {
+			newArr.push(studentArr[ind]) ;
+			alert(studentArr[ind]);
+		}else{
+				getStudent();
+		}
+	}
+	document.querySelector('button').onclick = getStudent;
+	</script>
+	
+</body>
+</html>

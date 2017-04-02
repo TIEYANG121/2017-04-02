@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr=[3,4,5,6,4,4,7,5,1,'什么'];
+		function noRepeat(arr){
+			var obj = {};
+			var newarr = [];
+			for(var i = 0;i<arr.length;i++){
+				if(!obj[arr[i]]){
+					newarr.push(arr[i]);
+					obj[arr[i]] = 1;
+				// }else{
+				// 	for(var j = 0;j<newarr.length;j++){
+				// 	if(arr[i]===newarr[i]){
+				// 	}	
+				// 	}
+				}
+			}
+			return newarr;
+		}
+		var noRepeatArr =noRepeat(arr);
+		console.log(noRepeatArr);
+		
+		console.log(arr);
+	</script>
+</body>
+</html>

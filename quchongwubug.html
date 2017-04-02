@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var arr=[3,4,5,6,4,4,7,5,1,'1'];
+		function noRepeat(arr){
+			var newarr = [];
+			for(var i = 0;i<arr.length;i++){
+
+				if (checkArr(arr[i])) {
+					newarr.push(arr[i]);
+				}
+			}
+			function checkArr(val){
+				var bool = true;
+				for (var i=0;i<newarr.length;i++) {
+
+
+							if (val===newarr[i]) {
+								bool = false;
+								break
+							}
+						}
+						return bool;
+				}
+			return newarr;
+		}
+		var noRepeatArr =noRepeat(arr);
+		console.log(noRepeatArr);
+		console.log(arr);
+</script>
+		
+</body>
+</html>

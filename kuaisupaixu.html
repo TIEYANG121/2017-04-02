@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr = [ 8, 10, 100, 90, 65, 5, 4, 10, 2,342,4,5,436,56,7,8,9,8,4,2,12 ];
+		var result = QuickSort(arr);
+		function QuickSort(array) {
+  			var length = array.length;
+ 			 if (length <= 1) {
+   				 return array;
+ 				 } else {
+    			var smaller = [];
+   				 var bigger = [];
+   				 var base = [array[0]];
+    		for (var i = 1; i < length; i++) {
+    		  if (array[i] <= base[0]) {
+       			 smaller.push(array[i]);
+     			 } else {
+     		   bigger.push(array[i]);
+     	 }
+   	 }
+    return QuickSort(smaller).concat(base.concat(QuickSort(bigger)));
+  }
+}
+	console.log(result);
+	</script>
+</body>
+</html>

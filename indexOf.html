@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr =[2,2,3,4,6,1,2,1,"3"];
+		function noRepeat(arr){
+			var newarr = [];
+			for(var i=0;i<arr.length;i++){
+				if (newarr.indexOf(arr[i]) === -1) {
+					newarr.push(arr[i]) 
+				}
+
+			}
+			return newarr;                            
+		}
+		var noRepeatArr =noRepeat(arr);
+		console.log(noRepeatArr);
+		console.log(arr);
+	</script>
+</body>
+</html>
